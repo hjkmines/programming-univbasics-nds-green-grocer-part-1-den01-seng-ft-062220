@@ -11,9 +11,9 @@ return nil
 end
 
 def consolidate_cart(cart)
-  binding.pry
 
-  new_cart = cart.group_by(:itself).map{|k, v| k.merge(count: v.length)}
+  new_cart = cart.group_by(&:itself).map{|k, v| k.merge(count: v.length)}
+  binding.pry
   return new_cart
 
 end

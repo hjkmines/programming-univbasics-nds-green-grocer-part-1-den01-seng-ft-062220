@@ -7,13 +7,13 @@ collection.each do |x|
     return x
   end
 end
-return nil 
+return nil
 end
 
 def consolidate_cart(cart)
 
   new_cart = cart.group_by(:itself).map{|k, v| k.merge(count: v.length)}
-  binding.pry 
+  binding.pry
   return new_cart
 
 end

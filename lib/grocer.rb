@@ -5,6 +5,7 @@ collection.each do |x|
     return x 
   end 
 end 
+return nil 
 end
 
 def consolidate_cart(cart)
